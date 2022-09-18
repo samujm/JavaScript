@@ -15,6 +15,7 @@ function miFuncion(a, b) {
     // console.log("Suma: " + (a + b));
     /*-------------------------- ▀ Retornar el resultado, para ello la funcion se asigna a una variable -------------------*/
     return a + b;
+    /*-------------------------- ▀ Nota: Si no se coloca la palabra RETURN esta se agrega de manera implicita en la ultima linea de la funcion cuando no regresa un valor -------------------*/
 }
 
 //Llamada a la funcion
