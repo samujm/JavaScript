@@ -87,3 +87,22 @@ console.log(miFuncion);
 const sumarFuncionTipoFlecha = (a,b) => a + b;
 resultado = sumarFuncionTipoFlecha(3,4);
 console.log(resultado);
+
+
+
+/*--------------------------------------------------------------《 ARGUMENTOS Y PARAMETROS 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ PARAMETROS: Las variables que recibe la funcion, lista de valores que recibe una funcion -------------------*/
+/*-------------------------- ▀ ARGUMENTOS: Valores que se pasan a una funcion cuando se manda llamar la funcion -------------------*/
+/*-------------------------- ▀ No es necesario definir el valor -------------------*/
+/*-------------------------- ▀ No es requerido que coincida el numero de argumento con el de parametros, si no coincide se puede acceder con arguments[2]*** -------------------*/
+let sumar2 = function(a = 2, b = 5 ){
+    /*-------------------------- ▀ arguments para saber el valor del argumento -------------------*/
+    console.log(arguments[0]);
+    console.log(arguments[1]);
+    console.log(arguments[2]); //Se puede acceder con arguments y el indice pero no con un nombre de un parametro
+    return a + b + arguments[2]; //Se agrega el tercer argumento
+};
+
+/*-------------------------- ▀ No es requerido que coincida el numero de argumento con el de parametros, si no coincide se puede acceder con arguments[2]*** -------------------*/
+resultado = sumar2(3,6,7);
+console.log(resultado);
