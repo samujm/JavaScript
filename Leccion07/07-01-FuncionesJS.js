@@ -71,3 +71,19 @@ function miFuncion(a, b) {
 //Metodos
 var miFuncion = miFuncion.toString();
 console.log(miFuncion);
+
+
+
+
+
+/*--------------------------------------------------------------《 FUNCION FLECHA 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Se utiliza const ya que es más recomendable -------------------*/
+/*-------------------------- ▀ Se asigna la referencia de la funcion a la variable para que se pueda utilizar -------------------*/
+/*-------------------------- ▀ Lo más comun es que ya no se modifica la referencia que se le asigno a esa variable -------------------*/
+/*-------------------------- ▀ No se utiliza la palabra reservada function -------------------*/
+/*-------------------------- ▀ No se utilizan llaves, solo flecha -------------------*/
+/*-------------------------- ▀ Se omite return -------------------*/
+/*-------------------------- ▀ Toda la funcion [(a,b) => a + b] se asigna un espacio de memoria [sumarFuncionTipoFlecha] y esa variable la manda llamar -------------------*/
+const sumarFuncionTipoFlecha = (a,b) => a + b;
+resultado = sumarFuncionTipoFlecha(3,4);
+console.log(resultado);
