@@ -24,3 +24,16 @@ miFuncion(2,3);
 /*-------------------------- ▀ Asignar el return de la suma a una variable para poder mostrar el resultado -------------------*/
 let resultado = miFuncion(2,3);
 console.log(resultado);
+
+
+
+
+/*--------------------------------------------------------------《 FUNCION DE TIPO EXPRESION O ANONIMA 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Se asigna a una variable y no se le coloca el nombre a la funcion -------------------*/
+/*-------------------------- ▀ Esta si debe terminar en ; ya que es una linea que si se ejecuta -------------------*/
+//DECLARACION DE UNA FUNCION DE TIPO EXPRESION
+let sumar = function (a,b){return a + b;};
+//UTILIZAR LA FUNCION DE TIPO EXPRESION, MANDAR LLAMAR
+/*-------------------------- ▀ Se manda llamar la variable que a su vez almancena la referencia en memoria a la funcion -------------------*/
+resultado = sumar(1,2);
+console.log(resultado);
