@@ -1,5 +1,7 @@
-let mes = 11;
+let mes = "11";
 let estacion = 'Estación desconocida';
+
+/*-------------------------- ▀ Utiliza comparaciones de tipo estricta -------------------*/
 
 switch( mes ){
     case 1: case 2: case 12:
