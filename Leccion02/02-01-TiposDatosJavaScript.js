@@ -22,3 +22,9 @@ var objeto = {
     telefono : "55443322"
 }
 console.log(typeof objeto);
+
+//Tipo de dato boolean (true, false)
+//Se llaman bandera
+var bandera = false;
+console.log(bandera);
+console.log(typeof bandera)
