@@ -28,3 +28,9 @@ console.log(typeof objeto);
 var bandera = false;
 console.log(bandera);
 console.log(typeof bandera)
+
+//Tipo de dato function
+//Permite realizar ciertas tareas que se pueden reutilizar al mandar llamar la funcion
+function miFuncion(){}
+console.log(miFuncion);
+console.log(typeof miFuncion)
