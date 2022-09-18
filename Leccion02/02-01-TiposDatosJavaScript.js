@@ -50,3 +50,8 @@ class Persona{
 }
 console.log(Persona);
 console.log(typeof Persona)
+
+//Tipo undefined
+var x;
+console.log(x);
+console.log(typeof x);
