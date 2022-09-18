@@ -37,3 +37,19 @@ let sumar = function (a,b){return a + b;};
 /*-------------------------- ▀ Se manda llamar la variable que a su vez almancena la referencia en memoria a la funcion -------------------*/
 resultado = sumar(1,2);
 console.log(resultado);
+
+
+/*--------------------------------------------------------------《 FUNCION SELF-INVOKING 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Es una funcion anonima pero que se puede mandar llamar a si misma -------------------*/
+/*-------------------------- ▀ Se manda llamar a si misma -------------------*/
+/*-------------------------- ▀ Se ejecuta automaticamente -------------------*/
+/*-------------------------- ▀ Solo se ejecuta una ocasion -------------------*/
+/*-------------------------- ▀ No se puede reutilizar ya que no se esta asignando a una variable ni se le asigna un nombre -------------------*/
+//DECLARACION DE UNA FUNCION SELF-INVOKING
+(function (){ //Sin parametros
+    console.log('Ejecutando la funcion');
+})(); //En los parentesis se manda llamar
+
+(function (a, b){ //Con parametros
+    console.log('Ejecutando la funcion: ' + (a + b));
+})(3,4); //En los parentesis se manda llamar
