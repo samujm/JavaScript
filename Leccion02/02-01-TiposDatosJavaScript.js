@@ -40,3 +40,13 @@ console.log(typeof miFuncion)
 var simbolo = Symbol("mi simbolo");
 console.log(simbolo);
 console.log(typeof simbolo);
+
+//Tipo clase es una function
+class Persona{
+    constructor(nombre, apellido){
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+}
+console.log(Persona);
+console.log(typeof Persona)
