@@ -34,3 +34,9 @@ console.log(typeof bandera)
 function miFuncion(){}
 console.log(miFuncion);
 console.log(typeof miFuncion)
+
+//Tipo de dato Symbol
+//Valor unico de una variable
+var simbolo = Symbol("mi simbolo");
+console.log(simbolo);
+console.log(typeof simbolo);
