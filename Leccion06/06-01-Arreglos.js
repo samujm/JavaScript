@@ -26,3 +26,19 @@ for(let i = 0; i < autos.length; i++){
 /*-------------------------- ▀ Modificar los elementos de un arreglo -------------------*/
 autos[1] = 'MercedesBenz';
 console.log(autos[1]);
+
+
+/*-----------------------------《 FUNCION PUSH 》-------------------------------------------*/
+/*-------------------------- ▀ Agregar un elemento al final del arreglo -------------------*/
+autos.push('Audi');
+console.log(autos);
+
+/*-------------------------- ▀ Otra forma de gregar un elemento al final del arreglo -------------------*/
+/*-------------------------- ▀ 0,1,2,3 (indices); BMW, Mercedes Benz, Volvo (elementos) -------------------*/
+console.log(autos.length);
+autos[autos.length] = 'Cadillac';
+console.log(autos);
+
+/*-------------------------- ▀ Agregar un elemento en una posicion en especifico pero NO ES RECOMENDABLE -------------------*/
+autos[6] = 'Porshe';
+console.log(autos);
