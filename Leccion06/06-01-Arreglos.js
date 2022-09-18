@@ -42,3 +42,12 @@ console.log(autos);
 /*-------------------------- ▀ Agregar un elemento en una posicion en especifico pero NO ES RECOMENDABLE -------------------*/
 autos[6] = 'Porshe';
 console.log(autos);
+
+
+/*-----------------------------《 FUNCION ARRAY.ISARRAY 》-------------------------------------------*/
+/*-------------------------- ▀ Con typeof no se puede por que me dice que es un objeto -------------------*/
+console.log(typeof autos);
+/*-------------------------- ▀ Saber si es un arreglo -------------------*/
+console.log(Array.isArray(autos));
+/*-------------------------- ▀ Si la variable autos es una instancia de tipo arreglo -------------------*/
+console.log(autos instanceof Array);
