@@ -63,3 +63,8 @@ console.log(typeof x);
 var y = null;
 console.log(y);
 console.log(typeof y)
+
+//Array
+var autos = ["BMW","Audi","Volvo"];
+console.log(autos);
+console.log(typeof autos);
