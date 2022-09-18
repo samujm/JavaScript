@@ -12,9 +12,17 @@
 const autos = ['BMW', 'Mercedes Benz', 'Volvo'];
 console.log(autos);
 
+
+/*-------------------------- ▀ Acceder a elementos de un arreglo de forma individual -------------------*/
 console.log(autos[0]);
 console.log(autos[2]);
 
+/*-------------------------- ▀ Acceder a elementos de un arreglo por medio de un ciclo -------------------*/
 for(let i = 0; i < autos.length; i++){
     console.log(i + ' ' + autos[i]);
 }
+
+
+/*-------------------------- ▀ Modificar los elementos de un arreglo -------------------*/
+autos[1] = 'MercedesBenz';
+console.log(autos[1]);
