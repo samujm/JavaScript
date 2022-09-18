@@ -58,3 +58,8 @@ console.log(typeof x);
 x = undefined;
 console.log(x);
 console.log(typeof x);
+
+//null = ausencia de valor
+var y = null;
+console.log(y);
+console.log(typeof y)
