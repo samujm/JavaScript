@@ -53,3 +53,21 @@ console.log(resultado);
 (function (a, b){ //Con parametros
     console.log('Ejecutando la funcion: ' + (a + b));
 })(3,4); //En los parentesis se manda llamar
+
+
+
+
+
+/*--------------------------------------------------------------《 FUNCION COMO OBJETO 》------------------------------------------------------------------------------------*/
+console.log(typeof miFuncion);
+/*-------------------------- ▀ La funcion es un objeto y los objetos tienen propiedades y metodos -------------------*/
+function miFuncion(a, b) {
+    //Propiedades
+    /*-------------------------- ▀ La propiedad arguments permite saber cuantos argumentos recibe la funcion -------------------*/
+    /*-------------------------- ▀ Solo se utiliza dentro de la funcion para poder realizarla -------------------*/
+    console.log(arguments.length);
+    return a + b;
+}
+//Metodos
+var miFuncion = miFuncion.toString();
+console.log(miFuncion);
