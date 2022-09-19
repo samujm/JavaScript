@@ -43,3 +43,17 @@ persona2.direccion = 'Saturno 15';
 persona2.telefono = '55443322';
 
 console.log(persona2.telefono);
+
+
+
+
+/*--------------------------------------------------------------《 ACCEDER A LAS PROPIEDADES DE LOS OBJETOS 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Como si fuera un arreglo -------------------*/
+console.log(persona['apellido']);
+
+/*---------------------《 ACCEDER A LAS PROPIEDADES DE LOS OBJETOS CON FOR IN》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Con un FOR IN-------------------*/
+for(nombrePropiedad in persona){
+    console.log(nombrePropiedad);
+    console.log(persona[nombrePropiedad]);
+}
