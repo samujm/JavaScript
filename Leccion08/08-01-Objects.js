@@ -57,3 +57,26 @@ for(nombrePropiedad in persona){
     console.log(nombrePropiedad);
     console.log(persona[nombrePropiedad]);
 }
+
+
+
+
+
+/*--------------------------------------------------------------《 AGREGAR PROPIEDADES A LOS OBJETOS 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Se agregan de la siguiente forma: -------------------*/
+persona.tel = '54452122';
+/*-------------------------- ▀ Nota: Tener cuidado al querer MODIFICAR el valor de la propiedad, ya que en lugar de editarlo puede que este haciendo otra -------------------*/
+persona.te1 = '48755412';
+persona.tel = '48755555';
+
+console.log(persona);
+
+
+
+
+
+/*--------------------------------------------------------------《 ELIMINAR PROPIEDADES A LOS OBJETOS 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Se eliminan de la siguiente forma: -------------------*/
+delete persona.tel;
+
+console.log(persona);
