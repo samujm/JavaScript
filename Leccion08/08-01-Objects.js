@@ -167,3 +167,26 @@ console.log( madre.nombreCompleto() );
 
 padre.nombre = 'Carlos';
 console.log( padre );
+
+
+
+
+/*--------------------------------------------------------------《 DISTINTAS FORMAS DE CREAR OBJETOS 》------------------------------------------------------------------------------------*/
+
+let miObjeto = new Object();
+let miObjeto2 = {} //Recomendable
+
+let miCadena1 = new String('Hola');
+let miCadena2 = 'Hola'; //Recomendable
+
+let miNumero = new Number(1);
+let miNumero2 = 1; //Recomendable
+
+let miBoolean = new Boolean(false);
+let miBoolean2 = false; //Recomendable
+
+let miArreglo1 = new Array();
+let miArreglo2 = []; //Recomendable
+
+let miFuncion = new Function();
+let miFuncion1 = function(){}; //Recomendable
