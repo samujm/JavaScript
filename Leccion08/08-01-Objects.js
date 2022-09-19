@@ -9,10 +9,22 @@ let persona = {
     nombre: 'Juan',
     apellido: 'Perez',
     email: 'jperez@mail.com',
-    edad: 28
+    edad: 28,
+
+    /*--------------------------------------------------------------《 METODOS DE OBJETOS 》------------------------------------------------------------------------------------*/
+    /*-------------------------- ▀ Se agrega como un atributo pero con una funcion de tipo expresion -------------------*/
+    nombreCompleto: function(){
+        /*-------------------------- ▀ Dentro del objeto se accede a las propiedades mediante this -------------------*/
+        return this.nombre + ' ' + this.apellido;
+    },
+    miFuncion:function(){
+        
+    }
 }
 
 console.log(persona.nombre);
 console.log(persona.edad);
 console.log(persona.apellido);
 console.log(persona);
+//ACCEDIENDO AL METODO
+console.log(persona.nombreCompleto());
