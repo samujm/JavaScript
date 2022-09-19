@@ -170,6 +170,17 @@ console.log( padre );
 
 
 
+/*--------------------------------------------------------------《 AGREGAR UN ATRIBUTO FUERA DEL CONSTRUCTOR DEL OBJETO CON PROTOTYPE 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Modifica los atributos o metodos, los agrega pero afecta a todos los objetos creados -------------------*/
+Persona.prototype.tel = '44332211';
+
+console.log( padre.tel );
+padre.tel = '11223344';
+console.log( padre.tel );
+
+console.log( madre.tel );
+
+
 
 /*--------------------------------------------------------------《 DISTINTAS FORMAS DE CREAR OBJETOS 》------------------------------------------------------------------------------------*/
 
