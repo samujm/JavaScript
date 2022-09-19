@@ -80,3 +80,22 @@ console.log(persona);
 delete persona.tel;
 
 console.log(persona);
+
+
+
+/*--------------------------------------------------------------《 IMPRIMIR EL OBJETO 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Forma 1: Concatenar cada valor de cada propiedad -------------------*/
+console.log( persona.nombre + ', ' + persona.apellido)
+
+/*-------------------------- ▀ Forma 2: Con un FOR IN -------------------*/
+for(nombrePropiedad in persona){
+    console.log(persona[nombrePropiedad]);
+}
+
+/*-------------------------- ▀ Forma 3: Con Object.values() en forma de arreglo -------------------*/
+let personaArray = Object.values(persona);
+console.log(personaArray);
+
+/*-------------------------- ▀ Forma 4: Con JSON.stringify() lo convierte en cadena de texto JSON -------------------*/
+let personaString = JSON.stringify(persona);
+console.log(personaString);
