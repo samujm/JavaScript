@@ -149,13 +149,21 @@ function Persona(nombre, apellido, email){
     this.nombre = nombre;
     this.apellido = apellido;
     this.email = email;
+    /*--------------------------------------------------------------《 AGREGAR UN METODO AL CONTRUCTOR DE OBJETOS 》------------------------------------------------------------------------------------*/
+    this.nombreCompleto = function(){
+        return this.nombre + ' ' + this.apellido;
+    }
 }
 
 //Se crea el objeto Persona
 let padre = new Persona('Juan', 'Perez', 'jperez@mail.com');
 console.log( padre );
+//Se utiliza el metodo
+console.log( padre.nombreCompleto() );
+
 let madre = new Persona('Laura', 'Quintero', 'lquintero@mail.com');
 console.log( madre );
+console.log( madre.nombreCompleto() );
 
 padre.nombre = 'Carlos';
 console.log( padre );
