@@ -99,3 +99,42 @@ console.log(personaArray);
 /*-------------------------- ▀ Forma 4: Con JSON.stringify() lo convierte en cadena de texto JSON -------------------*/
 let personaString = JSON.stringify(persona);
 console.log(personaString);
+
+
+
+
+
+/*--------------------------------------------------------------《 METODOS GET Y SET EN OBJETOS 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Mejores practicas para acceder y modificar los valores de las propiedades de los objetos -------------------*/
+let persona3 = {
+    nombre: 'Juan',
+    apellido: 'Perez',
+    email: 'jperez@mail.com',
+    edad: 28,
+    idioma: 'es',
+    get lang(){
+        return this.idioma.toUpperCase();
+    },
+    /*-------------------------- ▀ SET: Modificar los valores de nuestros atributos del objeto  -------------------*/
+    set lang(lang){
+        this.idioma = lang.toUpperCase();
+    },
+    /*-------------------------- ▀ GET: Acceder a informacion del objeto  -------------------*/
+    /*-------------------------- ▀ Se coloca GET antes de la funcion y se elimina function  -------------------*/
+    get nombreCompleto(){ // nombreCompleto: function(){
+        return this.nombre + ' ' + this.apellido;
+    }
+}
+/*-------------------------- ▀ Para acceder se eliminan los () de la funcion ya que se entiende que es el metodo get -------------------*/
+// console.log( persona3.nombreCompleto() );
+console.log( persona3.nombreCompleto );
+
+
+console.log( persona3.lang );
+/*-------------------------- ▀ Mandar llamar el metodo SET -------------------*/
+persona3.lang = 'en';
+console.log( persona3.lang );
+console.log( persona3.idioma ); //Se almacenó correctamente
+
+
+
