@@ -2,9 +2,17 @@
 /*-------------------------- ▀ Todas las clases heredan las caracteristicas de la clase object -------------------*/
 
 class Persona {
+    /*--------------------------------------------------------------《 ATRIBUTO STATIC 》------------------------------------------------------------------------------------*/
+    /*-------------------------- ▀ Pertenece a la clase y no pertenece al objeto -------------------*/
+    static contadorObjetosPersona = 0;
+
     constructor(nombre, apellido){
         this._nombre = nombre;
         this._apellido = apellido;
+        /*-------------------------- ▀ Atributo static: Incrementar, no lleva this, debe llevar el nombre de la clase -------------------*/
+        /*-------------------------- ▀ Se incrementa tanto en el padre como en el hijo por que el hijo manda llamar el constructor del padre -------------------*/
+        Persona.contadorObjetosPersona++;
+        console.log( 'Se incrementa contador: ' + Persona.contadorObjetosPersona );
     }
     
     get nombre(){
@@ -106,3 +114,11 @@ Persona.saludar2(persona1);
 
 Empleado.saludar();
 Empleado.saludar2(empleado1);
+
+
+/*--------------------------------------------------------------《 ATRIBUTO STATIC 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Se debe acceder por medio de la clase -------------------*/
+ console.log(persona1.contadorObjetosPersona); //Se esta asignando al objeto, es como si se creara una nueva variable asociada, por eso arroja undefined
+console.log( Persona.contadorObjetosPersona ); //Aqui si se accede a la variable static por medio del nombre de la clase
+/*-------------------------- ▀ La clase hija tambien hereda la propiedad static -------------------*/
+console.log(Empleado.contadorObjetosPersona);
