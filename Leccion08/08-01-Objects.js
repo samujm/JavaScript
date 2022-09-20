@@ -182,6 +182,30 @@ console.log( madre.tel );
 
 
 
+/*--------------------------------------------------------------《 METODO CALL PARA OBJETOS 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Permite mandar llamar un metodo que esta definido en un objeto desde otro objeto -------------------*/
+
+let persona1 = {
+    nombre: 'Juanito',
+    apellido: 'Perez',
+    nombreCompleto: function(){
+        return this.nombre + ' ' + this.apellido;
+    }
+}
+
+let otraPersona = {
+    nombre: 'Carlos',
+    apellido: 'Lara'
+}
+
+//Uso de call para usar el metodo persona1.nombreCompleto con los datos de otraPersona
+console.log( persona1.nombreCompleto() );
+/*-------------------------- ▀ Como tiene los mismos atributos se puede utilizar -------------------*/
+console.log( persona1.nombreCompleto.call( otraPersona ) );
+
+
+
+
 /*--------------------------------------------------------------《 DISTINTAS FORMAS DE CREAR OBJETOS 》------------------------------------------------------------------------------------*/
 
 let miObjeto = new Object();
