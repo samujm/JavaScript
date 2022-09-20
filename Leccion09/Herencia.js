@@ -6,6 +6,10 @@ class Persona {
     /*-------------------------- ▀ Pertenece a la clase y no pertenece al objeto -------------------*/
     static contadorObjetosPersona = 0;
 
+    /*--------------------------------------------------------------《 ATRIBUTO NO DECLARADO EN CONSTRUCTOR NI TIPO STATIC 》------------------------------------------------------------------------------------*/
+    /*-------------------------- ▀ Pertenece al objeto creado a partir de la clase, se acceden por medio de la creación del objeto -------------------*/
+    email = 'Valor default email';
+
     constructor(nombre, apellido){
         this._nombre = nombre;
         this._apellido = apellido;
@@ -122,3 +126,15 @@ Empleado.saludar2(empleado1);
 console.log( Persona.contadorObjetosPersona ); //Aqui si se accede a la variable static por medio del nombre de la clase
 /*-------------------------- ▀ La clase hija tambien hereda la propiedad static -------------------*/
 console.log(Empleado.contadorObjetosPersona);
+
+
+
+/*--------------------------------------------------------------《 ATRIBUTO NO DECLARADO EN CONSTRUCTOR NI TIPO STATIC 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Acceder al atributo no static -------------------*/
+console.log( persona1.email );
+/*-------------------------- ▀ La clase hija tambien hereda el atributo no static -------------------*/
+console.log( empleado1.email );
+/*-------------------------- ▀ Por medio de la clase no se puede acceder y crea un nuevo atributo -------------------*/
+console.log(Persona.email); 
+/*-------------------------- ▀ Por medio de la clase hija tampoco se puede acceder y crea un nuevo atributo -------------------*/
+console.log(Empleado.email);
