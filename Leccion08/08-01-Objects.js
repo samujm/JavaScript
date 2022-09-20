@@ -189,7 +189,9 @@ let persona1 = {
     nombre: 'Juanito',
     apellido: 'Perez',
     nombreCompleto: function(titulo, tel){
+    // nombreCompleto: function(){
         return titulo + ' ' + this.nombre + ' ' + this.apellido + ' ' + tel ; //Como titulo y tel no son propiedades del objeto y se estan mandando como parametro solo se colocan, no llevan this
+        // return this.nombre + ' ' + this.apellido;
     }
 }
 
@@ -202,6 +204,20 @@ let otraPersona = {
 console.log( persona1.nombreCompleto('Lic.', '44332288') );
 /*-------------------------- ▀ Como tiene los mismos atributos se puede utilizar -------------------*/
 console.log( persona1.nombreCompleto.call( otraPersona, 'Ing', '55443322' ) ); //Se mandan los atributos al METODO con CALL
+
+
+
+/*--------------------------------------------------------------《 METODO APPLY PARA OBJETOS 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Permite mandar llamar un metodo en un objeto que no tiene definido cierto metodo -------------------*/
+/*-------------------------- ▀ NOTA: La diferencia de CALL es que se mandan los valores en arreglo y no por separado -------------------*/
+
+//Uso de apply
+console.log( persona1.nombreCompleto('Lic.', '66887711') );
+
+/*-------------------------- ▀ Con el metodo APPLY se pasa un arreglo y no por separado como el metodo CALL -------------------*/
+let arreglo = ['Ing.', '55443322'];
+console.log( persona1.nombreCompleto.apply( otraPersona, ['Ing.', '55443322'] ) ); //Asi se puede pasar
+console.log( persona1.nombreCompleto.apply( otraPersona, arreglo ) ); //O directamente en un arreglo
 
 
 
