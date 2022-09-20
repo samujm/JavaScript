@@ -20,6 +20,11 @@ class Persona {
     set apellido(apellido){
         this._apellido = apellido;
     }
+
+    //Metodo, no es necesario agregar la palabra function
+    nombreCompleto(){
+        return this._nombre + ' ' + this._apellido;
+    }
 }
 
 /*--------------------------------------------------------------《 HERENCIA 》------------------------------------------------------------------------------------*/
@@ -49,3 +54,6 @@ let empleado1 = new Empleado( 'Maria', 'Jimenez', 'Sistemas' );
 console.log(empleado1);
 /*-------------------------- ▀ En la siguiente linea confirmamos que se hereda el metodo get de la clase padre -------------------*/
 console.log( empleado1._nombre ); 
+
+/*-------------------------- ▀ ACCEDER AL METODO DEFINIDO EN EL PADRE -------------------*/
+console.log( empleado1.nombreCompleto() ); 
