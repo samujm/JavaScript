@@ -188,8 +188,8 @@ console.log( madre.tel );
 let persona1 = {
     nombre: 'Juanito',
     apellido: 'Perez',
-    nombreCompleto: function(){
-        return this.nombre + ' ' + this.apellido;
+    nombreCompleto: function(titulo, tel){
+        return titulo + ' ' + this.nombre + ' ' + this.apellido + ' ' + tel ; //Como titulo y tel no son propiedades del objeto y se estan mandando como parametro solo se colocan, no llevan this
     }
 }
 
@@ -199,9 +199,9 @@ let otraPersona = {
 }
 
 //Uso de call para usar el metodo persona1.nombreCompleto con los datos de otraPersona
-console.log( persona1.nombreCompleto() );
+console.log( persona1.nombreCompleto('Lic.', '44332288') );
 /*-------------------------- ▀ Como tiene los mismos atributos se puede utilizar -------------------*/
-console.log( persona1.nombreCompleto.call( otraPersona ) );
+console.log( persona1.nombreCompleto.call( otraPersona, 'Ing', '55443322' ) ); //Se mandan los atributos al METODO con CALL
 
 
 
