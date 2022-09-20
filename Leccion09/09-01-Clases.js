@@ -1,3 +1,6 @@
+//NO ES POSIBLE CREAR OBJETOS ANTES DE DECLARAR LA CLASE
+//let persona2 = new Persona( 'Karla', 'Juarez' );
+
 /*--------------------------------------------------------------《 CLASES 》------------------------------------------------------------------------------------*/
 /*-------------------------- ▀ Inician con mayuscula -------------------*/
 //Clase de tipo persona
@@ -34,3 +37,6 @@ console.log( persona1 );
 
 let persona2 = new Persona( 'Carlos', 'Lara' );
 console.log( persona2 );
+
+
+/*-------------------------- ▀ NOTA: EN CLASES NO SE APLICA HOISTING, NO SE PUEDE CREAR UN OBJETO DE UNA CLASE QUE AUN NO SE HA DEFINIDO -------------------*/
