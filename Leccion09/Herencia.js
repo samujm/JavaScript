@@ -44,6 +44,13 @@ class Empleado extends Persona{
     set departamento(departamento){
         this._departamento = departamento;
     }
+    /*--------------------------------------------------------------《 SOBREESCRITURA 》------------------------------------------------------------------------------------*/
+    /*-------------------------- ▀ Modificar el comportamiento de algun metodo definido de la clase padre -------------------*/
+    /*-------------------------- ▀ Debe ser el mismo nombre de la funcion y los mismos parametros si no ya no es sobreescritura -------------------*/
+    nombreCompleto(){
+        /*-------------------------- ▀ Se coloca super para no volver a escribir los parametros y se concatena lo demás -------------------*/
+        return super.nombreCompleto() + ', ' + this._departamento;
+    }
 }
 
 let persona1 = new Persona( 'Juan', 'Perez' ); 
