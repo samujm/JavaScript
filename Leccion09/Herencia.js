@@ -8,7 +8,7 @@ class Persona {
     }
     
     get nombre(){
-        return this._apellido;
+        return this._nombre;
     }
     
     set nombre(nombre){
@@ -37,6 +37,16 @@ class Persona {
         //o de tipo hijo
         return this.nombreCompleto();
     }    
+
+    /*--------------------------------------------------------------《 METODO STATIC 》------------------------------------------------------------------------------------*/
+    /*-------------------------- ▀ El metodo static se asocia con la clase y no con el objeto -------------------*/
+    static saludar(){
+        console.log('Saludos desde Metodo static');
+    }
+
+    static saludar2(persona){
+        console.log(persona.nombre + ' ' + persona.apellido);
+    }
 }
 
 /*--------------------------------------------------------------《 HERENCIA 》------------------------------------------------------------------------------------*/
@@ -83,3 +93,16 @@ console.log( empleado1.nombreCompleto() );
 
 /*-------------------------- ▀ Metodo toString -------------------*/
 console.log( empleado1.toString()); //AQUI SE MANDA LLAMAR EL METODO NOMBRECOMPLETO PERO DE LA CLASE HIJO POR QUE SE TRABAJA CON ESA REFERENCIA (POLIMORFISMO)
+
+
+
+/*--------------------------------------------------------------《 METODO STATIC 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Se asocia unicamente con la clase y no con los objetos-------------------*/
+/*-------------------------- ▀ No es posible llamar un método static desde un objeto -------------------*/
+// persona1.saludar();
+/*-------------------------- ▀ Se puede llamar el metodo static desde la clase utilizando el tipo de la clase -------------------*/
+Persona.saludar();
+Persona.saludar2(persona1);
+
+Empleado.saludar();
+Empleado.saludar2(empleado1);
