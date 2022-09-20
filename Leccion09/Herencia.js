@@ -1,3 +1,5 @@
+/*--------------------------------------------------------------《 CLASE OBJECT 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Todas las clases heredan las caracteristicas de la clase object -------------------*/
 
 class Persona {
     constructor(nombre, apellido){
@@ -25,6 +27,16 @@ class Persona {
     nombreCompleto(){
         return this._nombre + ' ' + this._apellido;
     }
+
+    /*-------------------------- ▀ toString -------------------*/
+    //Sobreescribiendo el metodo de la clase Padre (Object)
+    toString(){
+        /*--------------------------------------------------------------《 POLIMORFISMO 》------------------------------------------------------------------------------------*/
+        //Se aplica polimorfismo (multiples formas en tiempo de ejecucion)
+        //el metodo que se ejecuta depende si es una referencia de tipo padre 
+        //o de tipo hijo
+        return this.nombreCompleto();
+    }    
 }
 
 /*--------------------------------------------------------------《 HERENCIA 》------------------------------------------------------------------------------------*/
@@ -55,6 +67,8 @@ class Empleado extends Persona{
 
 let persona1 = new Persona( 'Juan', 'Perez' ); 
 console.log( persona1 ); 
+console.log( persona1.toString() ); //AQUI SE MANDA LLAMAR EL METODO NOMBRECOMPLETO PERO DE LA CLASE PADRE POR QUE SE TRABAJA CON ESA REFERENCIA (POLIMORFISMO)
+
 
 /*-------------------------- ▀ Se crea el objeto de la clase hija con los atributos heredados de la clase padre y sus propios atributos -------------------*/
 let empleado1 = new Empleado( 'Maria', 'Jimenez', 'Sistemas' );
@@ -64,3 +78,8 @@ console.log( empleado1._nombre );
 
 /*-------------------------- ▀ ACCEDER AL METODO DEFINIDO EN EL PADRE -------------------*/
 console.log( empleado1.nombreCompleto() ); 
+
+
+
+/*-------------------------- ▀ Metodo toString -------------------*/
+console.log( empleado1.toString()); //AQUI SE MANDA LLAMAR EL METODO NOMBRECOMPLETO PERO DE LA CLASE HIJO POR QUE SE TRABAJA CON ESA REFERENCIA (POLIMORFISMO)
