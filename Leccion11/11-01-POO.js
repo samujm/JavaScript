@@ -21,11 +21,22 @@ class Gerente extends Empleado{
     }
 }
 
+/*--------------------------------------------------------------《 POLIMORFISMO 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Multiples formas, en este caso multiples formas seria llamar al metodo de la clase padre o de la clase hija -------------------*/
+//Se define un metodo fuera de las clases, es un metodo independiente o generico que recibe diferentes tipos
+//Recibe la variable que va a indicar a que metodo de obtenerDetalles se indique, mandandole el tipo y este se sustituye en el console.log
+function imprimir(tipo){ //tipo recibe la referencia y por eso se utiliza el metodo del padre o del hijo
+    //A donde apunte se manda llamar su metodo obtenerDetalles
+    console.log(tipo.obtenerDetalles()); //Como esta definido obtenerDetalles se puede mandar llamar con los dos tipos
+};
+
 let empleado1 = new Empleado( 'Juan', 3000 );
-console.log(empleado1.obtenerDetalles());
+// console.log(empleado1.obtenerDetalles());
 
 let gerente1 = new Gerente( 'Carlos', 5000, 'Sistemas' );
-console.log(gerente1.obtenerDetalles());
+// console.log(gerente1.obtenerDetalles());
 
+imprimir(empleado1);
+imprimir(gerente1);
 
 
