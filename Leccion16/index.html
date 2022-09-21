@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo DOM con JavaScript</title>
+</head>
+<body>
+    <!-- /*-------------------------- ▀ Los elementos son objetos, por medio de js se puede acceder por document.() -------------------*/ -->
+    <h1 id="cabecero">Ejemplo DOM con JavaScript</h1>
+    <p id="parrafo">Saludos</p>
+
+    <script>
+        /*-------------------------- ▀ document.getElementById('cabecero'); Selecciona el objeto con id cabecero -------------------*/
+        let cabecero = document.getElementById('cabecero');
+        /*-------------------------- ▀ cabecero.innerHTML toma el valor de ese objeto -------------------*/
+        console.log(`Valor cabecero: ${cabecero.innerHTML}`);
+        let parrafo = document.getElementById('parrafo');
+        console.log('Valor parrafo: ' + parrafo.innerHTML);
+
+        /*-------------------------- ▀ Sobreescribe el valor de parrafo -------------------*/
+        parrafo.innerHTML = 'Nuevo valor del parrafo';
+
+        cabecero.innerHTML = 'Cambio de cabecero';
+
+        console.log('Saludos desde JavaScript');
+    </script>
+</body>
+</html>
