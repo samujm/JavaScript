@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Ejemplo DOM con JavaScript</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style>
 </head>
 <body>
     <!-- /*-------------------------- ▀ Los elementos son objetos, por medio de js se puede acceder por document.() -------------------*/ -->
-    <h1 id="cabecero">Ejemplo DOM con JavaScript</h1>
-    <p id="parrafo">Saludos</p>
-    <p>Otro parrafo</p>
+    <h1 id="cabecero" class="azul">Ejemplo DOM con JavaScript</h1>
+    <p id="parrafo" class="azul">Saludos</p>
+    <p class="azul">Otro parrafo</p>
 
     <script>
         /*-------------------------- ▀ document.getElementById('cabecero'); Selecciona el objeto con id cabecero -------------------*/
         let cabecero = document.getElementById('cabecero');
         /*-------------------------- ▀ cabecero.innerHTML toma el valor de ese objeto -------------------*/
-        console.log(`Valor cabecero: ${cabecero.innerHTML}`);
+        // console.log(`Valor cabecero: ${cabecero.innerHTML}`);
         let parrafo = document.getElementById('parrafo');
-        console.log('Valor parrafo: ' + parrafo.innerHTML);
+        // console.log('Valor parrafo: ' + parrafo.innerHTML);
 
         /*-------------------------- ▀ Sobreescribe el valor de parrafo -------------------*/
         // parrafo.innerHTML = 'Nuevo valor del parrafo';
@@ -30,14 +35,26 @@
 /*--------------------------------------------------------------《 RECUPERAR POR EL TIPO DE ELEMENTO 》------------------------------------------------------------------------------------*/
 /*-------------------------- ▀ Devuelve posiblemente un arreglo de elementos -------------------*/
         let parrafos = document.getElementsByTagName('p');
-        console.log(`No. parrafos: ${parrafos.length}`);
+        // console.log(`No. parrafos: ${parrafos.length}`);
 
         for(let i = 0; i < parrafos.length; i++){
-            console.log(`${i} - ${parrafos[i].innerHTML}`); //REGRESA EL VALOR O TEXTO
+            // console.log(`${i} - ${parrafos[i].innerHTML}`); //REGRESA EL VALOR O TEXTO
             // console.log(parrafos[i]); //REGRESA EL OBJETO
 
         }
 
+
+
+/*--------------------------------------------------------------《 RECUPERAR POR CLASES 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Recupera los elementos pero por clase -------------------*/
+
+    let elementos = document.getElementsByClassName('azul');
+    console.log(`No. Elementos: ${elementos.length}`);
+
+    /*-------------------------- ▀ Recorriendo el arreglo con for of -------------------*/
+    for (let elemento of elementos) {
+        console.log(`${elemento.innerHTML}`);
+    }
 
     </script>
 </body>
