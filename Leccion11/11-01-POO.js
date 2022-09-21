@@ -28,6 +28,23 @@ class Gerente extends Empleado{
 function imprimir(tipo){ //tipo recibe la referencia y por eso se utiliza el metodo del padre o del hijo
     //A donde apunte se manda llamar su metodo obtenerDetalles
     console.log(tipo.obtenerDetalles()); //Como esta definido obtenerDetalles se puede mandar llamar con los dos tipos
+
+    /*--------------------------------------------------------------《 INSTANCEOF 》------------------------------------------------------------------------------------*/
+    /*-------------------------- ▀ Saber a que instancia pertenece -------------------*/
+    /*-------------------------- ▀ Al inicio la clase de menor jerarquia y despues las ultimas de mayor jerarquia -------------------*/
+    if(tipo instanceof Gerente){ 
+        console.log('Es un objeto de tipo Gerente');
+        console.log(tipo.departamento);
+    } 
+
+    else if(tipo instanceof Empleado) {
+        console.log('Es un objeto de tipo Empleado');
+        console.log(tipo.departamento); //Responde con el valor de undefined ya que no está en la case
+
+    }
+    else  if(tipo instanceof Object){
+        console.log('Es un objeto de tipo Object');
+    }
 };
 
 let empleado1 = new Empleado( 'Juan', 3000 );
