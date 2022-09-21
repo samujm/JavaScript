@@ -35,9 +35,38 @@ let miPromesa = new Promise( ( resolved, rejected ) => {
 
 
 let promesa = new Promise((resolved)=>{
-    console.log('Inicio promesa');
+    //console.log('Inicio promesa');
     setTimeout( () => { resolved('Saludos con promesa y timeout'), 3000 } );
-    console.log('Fin promesa');
+    //console.log('Fin promesa');
 });
 
-promesa.then(valor => console.log(valor));
+//promesa.then(valor => console.log(valor));
+
+
+
+
+
+/*--------------------------------------------------------------《 ASYNC 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ indica que una funcion va a regresar una promesa -------------------*/
+/*-------------------------- ▀ Async Obliga a que una funcion debe regresar una promesa -------------------*/
+
+async function miFuncionConPromesa(){
+    return 'Saludos con promesa y async'; //Lo que retorna es lo que va a consumir el then que en este caso es el valor que se manda
+}
+
+// miFuncionConPromesa().then(valor => console.log(valor));
+
+/*--------------------------------------------------------------《 ASYNC - AWAIT 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ AWAIT Va a esperar el resultado de una promesa -------------------*/
+/*-------------------------- ▀ AWAIT Solo se puede ejecutar dentro de una funcion declarada con async -------------------*/
+
+
+async function funcionConPromesaYAwait(){
+    let miPromesa = new Promise(resolver => {
+        resolver('Promesa con await');
+    });
+
+    console.log(await miPromesa);
+}
+
+funcionConPromesaYAwait();
