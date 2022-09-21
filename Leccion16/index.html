@@ -8,6 +8,7 @@
     <!-- /*-------------------------- ▀ Los elementos son objetos, por medio de js se puede acceder por document.() -------------------*/ -->
     <h1 id="cabecero">Ejemplo DOM con JavaScript</h1>
     <p id="parrafo">Saludos</p>
+    <p>Otro parrafo</p>
 
     <script>
         /*-------------------------- ▀ document.getElementById('cabecero'); Selecciona el objeto con id cabecero -------------------*/
@@ -18,11 +19,26 @@
         console.log('Valor parrafo: ' + parrafo.innerHTML);
 
         /*-------------------------- ▀ Sobreescribe el valor de parrafo -------------------*/
-        parrafo.innerHTML = 'Nuevo valor del parrafo';
+        // parrafo.innerHTML = 'Nuevo valor del parrafo';
 
-        cabecero.innerHTML = 'Cambio de cabecero';
+        // cabecero.innerHTML = 'Cambio de cabecero';
 
-        console.log('Saludos desde JavaScript');
+        // console.log('Saludos desde JavaScript');
+
+
+
+/*--------------------------------------------------------------《 RECUPERAR POR EL TIPO DE ELEMENTO 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Devuelve posiblemente un arreglo de elementos -------------------*/
+        let parrafos = document.getElementsByTagName('p');
+        console.log(`No. parrafos: ${parrafos.length}`);
+
+        for(let i = 0; i < parrafos.length; i++){
+            console.log(`${i} - ${parrafos[i].innerHTML}`); //REGRESA EL VALOR O TEXTO
+            // console.log(parrafos[i]); //REGRESA EL OBJETO
+
+        }
+
+
     </script>
 </body>
 </html>
