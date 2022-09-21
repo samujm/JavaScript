@@ -33,3 +33,17 @@ function sumar(op1, op2, funcionCallBack){ //funcionCallBack recibe como argumen
 
 sumar(5, 3, imprimir); //Envia la funcion pero sin ()
 // sumar(5, 3, imp);
+
+/*--------------------------------------------------------------《 LLAMADAS ASÍNCRONAS CON USE SETTIMEOT 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Permite iniciar una tarea para que transcurriendo el tiempo -------------------*/
+
+function miFuncionCallBack(){
+    console.log('Saludo Asíncrono despues de 3 seg');
+}
+
+/*-------------------------- ▀ Recibe una funcion de tipo callback, el segundo parametro es el tiempo que transcurra en milisegundos -------------------*/
+setTimeout(miFuncionCallBack, 3000);
+
+setTimeout( function(){console.log('Saludo asincrono 2')}, 1000);
+
+setTimeout( () => console.log('Saludo asincrono 3'), 5000);
