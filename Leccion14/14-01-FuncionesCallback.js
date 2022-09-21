@@ -15,6 +15,8 @@ function miFuncion2(){
 
 /*--------------------------------------------------------------《 FUNCION CALLBACK 》------------------------------------------------------------------------------------*/
 /*-------------------------- ▀ Dentro de una funcion se manda llamar otra funcion -------------------*/
+/*-------------------------- ▀ NOTA: EL OBJETIVO DE LAS FUNCIONES CALLBACK ES QUE PUEDAN SER UTILIZADAS PARA PROCESOS QUE SE EJECUTAN DE MANER ASINCRONA -------------------*/
+/*-------------------------- ▀ SINCRONO: Se ejecuta una linea a la vez -------------------*/
 
 // let imp = function imprimir(mensaje){  //Otra forma de aplicar, se asigna la referencia a la variable imp y esa se manda en el argumento de suma
 //     console.log(mensaje);
