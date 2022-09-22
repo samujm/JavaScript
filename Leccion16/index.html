@@ -49,12 +49,26 @@
 /*-------------------------- ▀ Recupera los elementos pero por clase -------------------*/
 
     let elementos = document.getElementsByClassName('azul');
-    console.log(`No. Elementos: ${elementos.length}`);
+    // console.log(`No. Elementos: ${elementos.length}`);
 
     /*-------------------------- ▀ Recorriendo el arreglo con for of -------------------*/
     for (let elemento of elementos) {
-        console.log(`${elemento.innerHTML}`);
+        // console.log(`${elemento.innerHTML}`);
     }
+
+
+
+
+/*--------------------------------------------------------------《 RECUPAR ELEMENTOS CON DIFERENTES CARACTERISTICAS 》------------------------------------------------------------------------------------*/
+/*-------------------------- ▀ Se puede colocar el elemento o una clase  -------------------*/
+
+    let elementos2 = document.querySelectorAll('p.azul');
+    console.log(`No. Elementos: ${elementos2.length}`);
+
+    for (let elemento2 of elementos2) {
+        console.log(`${elemento2.innerHTML}`);
+    }
+
 
     </script>
 </body>
