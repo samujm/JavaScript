@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo DOM con JavaScript</title>
+</head>
+<body>
+
+    <h1 id="titulo">Manejo de DOM con JavaScript</h1>
+    <br/>
+    
+    <form id="forma">
+        Nombre: <input type="text" id="nombre"/>
+        <br/>
+        <br/>
+        Apellido: <input type="text" id="apellido"/>
+
+        <button>fff</button>
+    </form>
+    
+    <script> 
+
+        const forma = document.getElementById('forma');
+
+        forma.addEventListener('focus', (evento) => {
+            let componente = evento.target;
+            componente.style.background = "pink";
+        }, true); //SE AGREGA TRUE PARA QUE LO QUE HEMOS CONFIGURADO EN EL FORMULARIO TAMBIEN SE APLIQUE A LOS ELEMENTOS QUE CUENTAN CON UN FOCUS
+
+        forma.addEventListener('blur', (evento)=>{
+            evento.target.style.background = "white";
+        }, true);
+
+        
+    </script>
+
+</body>
+</html>
