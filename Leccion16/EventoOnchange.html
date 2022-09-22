@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo DOM con JavaScript</title>
+</head>
+<body>
+
+    <h1 id="titulo">Manejo de DOM con JavaScript</h1>
+    <br/>
+    Nombre: <input type="text" id="nombre" onchange="convertir(this);"> 
+    <script>
+        function convertir(nombreInput){
+            // let nombre = document.getElementById('nombre');
+            nombreInput.value = nombreInput.value.toUpperCase();
+        }
+    </script>
+
+</body>
+</html>
