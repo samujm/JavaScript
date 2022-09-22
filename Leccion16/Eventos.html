@@ -8,16 +8,26 @@
 </head>
 <body>
     <!-- this apunta a si mismo -->
-    <h1 onclick="cambiarTexto(this);">Manejo de DOM con JavaScript</h1>
+    <!-- <h1 onclick="cambiarTexto(this);">Manejo de DOM con JavaScript</h1> -->
+    <h1 id="titulo">Manejo de DOM con JavaScript</h1>
+    <div id="mostrar"></div>
     <br/>
     
     <script>
-        function cambiarTexto(titulo){
-            console.log(titulo);
-            console.log(titulo.innerHTML);
-            titulo.innerHTML = 'Cambiamos el título';
-            console.log(titulo.innerHTML);
+        // function cambiarTexto(titulo){
+        //     console.log(titulo);
+        //     console.log(titulo.innerHTML);
+        //     titulo.innerHTML = 'Cambiamos el título';
+        //     console.log(titulo.innerHTML);
+        // }
+
+
+        document.getElementById('titulo').onclick = cambiarTexto; //Funcion callback
+
+        function cambiarTexto(){
+            document.getElementById('mostrar').innerHTML = "Nuevo contenido";
         }
+
     </script>
 
 </body>
