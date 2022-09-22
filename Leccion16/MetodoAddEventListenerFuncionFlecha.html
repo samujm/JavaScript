@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo DOM con JavaScript</title>
+</head>
+<body>
+
+    <h1 id="titulo">Manejo de DOM con JavaScript</h1>
+    <br/>
+    Nombre: <input type="text" id="nombre"/>
+    <br/>
+    <br/>
+    Apellido: <input type="text" id="apellido"/>
+    <script> 
+
+
+        /*-------------------------- ▀ NOTA!!! Si se coloca funcion flecha es que no se puede reutilizar el codigo pues es anónima-------------------*/
+        document.getElementById('nombre').addEventListener('focus', (evento) => {
+            let componente = evento.target;
+            componente.style.background = "pink";
+        });
+        document.getElementById('nombre').addEventListener('blur', (evento)=>{
+            evento.target.style.background = "white";
+        });
+
+
+
+
+        document.getElementById('apellido').addEventListener('focus', cambiar); //FUNCION CALLBACK
+        document.getElementById('apellido').addEventListener('blur', regresar); //FUNCION CALLBACK
+
+        function cambiar(evento){
+            //target es el elemento que lanzo el evento, asi como this
+            let componente = evento.target;
+            componente.style.background = "yellow";
+        }
+
+        function regresar(evento){ //Se recibe el evento para recuperar el componente que lanzo el evento
+            evento.target.style.background = "white";
+        }
+
+    </script>
+
+</body>
+</html>
